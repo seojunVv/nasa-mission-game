@@ -1,36 +1,36 @@
-.arcade-page {
+.moon-game-page {
   min-height: 100vh;
   padding: 28px;
   background:
-    radial-gradient(circle at 20% 15%, rgba(37, 99, 235, 0.28), transparent 34%),
-    radial-gradient(circle at 85% 75%, rgba(126, 34, 206, 0.2), transparent 32%),
+    radial-gradient(circle at 18% 15%, rgba(37, 99, 235, 0.3), transparent 34%),
+    radial-gradient(circle at 85% 78%, rgba(126, 34, 206, 0.2), transparent 32%),
     #020617;
   color: #f8fafc;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.arcade-page * {
+.moon-game-page * {
   box-sizing: border-box;
 }
 
-.arcade-shell {
+.moon-game-shell {
   width: min(1180px, 100%);
   margin: 0 auto;
   padding: 34px;
   border: 1px solid #334155;
   border-radius: 18px;
-  background: rgba(2, 6, 23, 0.94);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+  background: rgba(2, 6, 23, 0.95);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
 
-.arcade-header {
+.moon-game-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 24px;
 }
 
-.arcade-kicker {
+.moon-game-kicker {
   margin: 0 0 12px;
   color: #60a5fa;
   font-size: 12px;
@@ -38,24 +38,24 @@
   letter-spacing: 3px;
 }
 
-.arcade-header h1 {
+.moon-game-header h1 {
   margin: 0;
   color: #f8fafc;
   font-size: clamp(34px, 6vw, 66px);
   line-height: 0.95;
 }
 
-.arcade-room {
+.moon-game-room {
   margin: 18px 0 0;
   color: #94a3b8;
   letter-spacing: 2px;
 }
 
-.arcade-room strong {
+.moon-game-room strong {
   color: #93c5fd;
 }
 
-.arcade-exit {
+.moon-game-exit {
   border: 0;
   background: transparent;
   color: #cbd5e1;
@@ -63,48 +63,48 @@
   cursor: pointer;
 }
 
-.arcade-message {
+.moon-game-message {
   margin: 28px 0 16px;
   padding: 16px 18px;
   border: 1px solid #475569;
   border-radius: 9px;
-  background: rgba(15, 23, 42, 0.78);
+  background: rgba(15, 23, 42, 0.8);
   color: #cbd5e1;
   font-weight: 700;
 }
 
-.arcade-message.active {
+.moon-game-message.active {
   border-color: #facc15;
   color: #fde68a;
 }
 
-.arcade-message.success {
+.moon-game-message.success {
   border-color: #22c55e;
   background: rgba(20, 83, 45, 0.35);
   color: #bbf7d0;
 }
 
-.arcade-message.failed {
+.moon-game-message.failed {
   border-color: #ef4444;
   background: rgba(127, 29, 29, 0.34);
   color: #fecaca;
 }
 
-.arcade-telemetry {
+.moon-game-stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 18px;
 }
 
-.arcade-telemetry article {
+.moon-game-stats article {
   padding: 16px;
   border: 1px solid #334155;
   border-radius: 10px;
   background: rgba(15, 23, 42, 0.78);
 }
 
-.arcade-telemetry span {
+.moon-game-stats span {
   display: block;
   margin-bottom: 8px;
   color: #94a3b8;
@@ -113,20 +113,20 @@
   letter-spacing: 1.5px;
 }
 
-.arcade-telemetry strong {
+.moon-game-stats strong {
   color: #f8fafc;
   font-size: 24px;
 }
 
-.pilot-section,
-.engineer-section {
+.pilot-game,
+.engineer-console {
   margin-top: 18px;
 }
 
-.pilot-fault {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 5px 18px;
+.pilot-malfunction {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
   margin-bottom: 14px;
   padding: 14px 18px;
   border: 1px solid #ef4444;
@@ -134,62 +134,66 @@
   background: rgba(127, 29, 29, 0.34);
 }
 
-.pilot-fault strong {
+.pilot-malfunction div {
+  display: grid;
+  gap: 5px;
+}
+
+.pilot-malfunction strong {
   color: #fecaca;
 }
 
-.pilot-fault span {
+.pilot-malfunction span {
   color: #fca5a5;
 }
 
-.pilot-fault small {
-  grid-column: 2;
-  grid-row: 1 / 3;
+.pilot-malfunction small {
   align-self: center;
   color: #fef2f2;
   font-weight: 900;
 }
 
-.flight-field {
+.space-flight-area {
   position: relative;
   height: 440px;
   overflow: hidden;
   border: 1px solid #334155;
   border-radius: 16px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.75) 0 1px, transparent 2px),
-    radial-gradient(circle at 70% 35%, rgba(255, 255, 255, 0.7) 0 1px, transparent 2px),
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.8) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 35%, rgba(255, 255, 255, 0.75) 0 1px, transparent 2px),
     radial-gradient(circle at 42% 75%, rgba(255, 255, 255, 0.65) 0 1px, transparent 2px),
     linear-gradient(90deg, #020617 0%, #07122b 65%, #151a34 100%);
   background-size: 95px 90px, 135px 125px, 170px 145px, auto;
   box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.72);
 }
 
-.star-layer {
+.stars {
   position: absolute;
   inset: 0;
   opacity: 0.5;
   background-image:
-    radial-gradient(circle, #fff 0 1px, transparent 1.5px),
+    radial-gradient(circle, #ffffff 0 1px, transparent 1.5px),
     radial-gradient(circle, #93c5fd 0 1px, transparent 1.5px);
   background-position: 0 0, 40px 60px;
   background-size: 80px 80px, 120px 120px;
 }
 
-.pilot-ship {
+.player-rocket {
   position: absolute;
   left: 12%;
   z-index: 5;
   font-size: 54px;
   line-height: 1;
   transform: translateY(-50%) rotate(45deg);
-  filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.7));
+  filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.75));
   transition: top 0.04s linear;
 }
 
-.space-obstacle {
+.asteroid {
   position: absolute;
   z-index: 4;
+  aspect-ratio: 1;
   border: 2px solid #a16207;
   border-radius: 43% 57% 52% 48%;
   background:
@@ -200,12 +204,12 @@
   box-shadow: 0 0 18px rgba(120, 113, 108, 0.3);
 }
 
-.space-obstacle.hit {
-  opacity: 0.25;
+.asteroid.hit {
+  opacity: 0.2;
   border-color: #ef4444;
 }
 
-.moon-destination {
+.moon-target {
   position: absolute;
   right: 3%;
   top: 50%;
@@ -225,13 +229,13 @@
   transition: opacity 0.3s, transform 0.3s;
 }
 
-.moon-destination span {
+.moon-target span {
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 2px;
 }
 
-.flight-overlay {
+.flight-screen-overlay {
   position: absolute;
   inset: 0;
   z-index: 10;
@@ -239,22 +243,22 @@
   place-content: center;
   gap: 12px;
   padding: 30px;
-  background: rgba(2, 6, 23, 0.67);
+  background: rgba(2, 6, 23, 0.68);
   text-align: center;
 }
 
-.flight-overlay strong {
+.flight-screen-overlay strong {
   color: #f8fafc;
   font-size: clamp(28px, 5vw, 54px);
 }
 
-.flight-overlay span {
+.flight-screen-overlay span {
   max-width: 540px;
   color: #cbd5e1;
   line-height: 1.6;
 }
 
-.pilot-progress {
+.moon-progress {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -266,27 +270,27 @@
   letter-spacing: 1.5px;
 }
 
-.pilot-progress div {
+.moon-progress div {
   height: 8px;
   overflow: hidden;
   border-radius: 999px;
   background: #1e293b;
 }
 
-.pilot-progress i {
+.moon-progress i {
   display: block;
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #3b82f6, #e2e8f0);
 }
 
-.pilot-controls-simple {
+.simple-flight-controls {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 12px;
 }
 
-.pilot-controls-simple button {
+.simple-flight-controls button {
   min-height: 96px;
   display: flex;
   flex-direction: column;
@@ -303,23 +307,23 @@
   user-select: none;
 }
 
-.pilot-controls-simple button:hover:not(:disabled) {
+.simple-flight-controls button:hover:not(:disabled) {
   border-color: #60a5fa;
   background: #1e293b;
 }
 
-.pilot-controls-simple button:disabled {
+.simple-flight-controls button:disabled {
   cursor: default;
   opacity: 0.4;
 }
 
-.pilot-controls-simple button small {
+.simple-flight-controls button small {
   color: #94a3b8;
   font-size: 9px;
   letter-spacing: 1.5px;
 }
 
-.pilot-controls-simple > div {
+.simple-flight-controls > div {
   display: grid;
   place-content: center;
   padding: 16px;
@@ -329,31 +333,31 @@
   text-align: center;
 }
 
-.pilot-controls-simple > div strong {
+.simple-flight-controls > div strong {
   color: #93c5fd;
 }
 
-.pilot-controls-simple > div span {
+.simple-flight-controls > div span {
   margin-top: 7px;
   color: #94a3b8;
   font-size: 11px;
 }
 
-.engineer-grid {
+.engineer-console-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-.engineer-task-card,
-.engineer-status-card {
+.repair-task-panel,
+.pilot-system-panel {
   padding: 26px;
   border: 1px solid #334155;
   border-radius: 14px;
   background: rgba(15, 23, 42, 0.76);
 }
 
-.engineer-label {
+.engineer-panel-label {
   margin: 0 0 14px;
   color: #60a5fa;
   font-size: 11px;
@@ -361,18 +365,18 @@
   letter-spacing: 2px;
 }
 
-.engineer-task-card h2 {
+.repair-task-panel h2 {
   margin: 0 0 14px;
   color: #f8fafc;
   font-size: 30px;
 }
 
-.engineer-task-card > p {
+.repair-task-panel > p {
   color: #cbd5e1;
   line-height: 1.6;
 }
 
-.engineer-start {
+.start-moon-flight {
   width: 100%;
   margin-top: 20px;
   padding: 17px;
@@ -384,7 +388,7 @@
   cursor: pointer;
 }
 
-.task-timer {
+.repair-timer {
   height: 8px;
   margin-top: 22px;
   overflow: hidden;
@@ -392,7 +396,7 @@
   background: #1e293b;
 }
 
-.task-timer i {
+.repair-timer i {
   display: block;
   height: 100%;
   border-radius: inherit;
@@ -400,14 +404,14 @@
   transition: width 0.1s linear;
 }
 
-.task-countdown {
+.repair-countdown {
   display: block;
   margin-top: 8px;
   color: #f8fafc;
   text-align: right;
 }
 
-.task-sequence {
+.repair-sequence {
   margin: 22px 0;
   padding: 22px;
   border: 1px solid #60a5fa;
@@ -420,20 +424,20 @@
   text-align: center;
 }
 
-.task-sequence.hidden {
+.repair-sequence.hidden {
   border-color: #475569;
   background: #0f172a;
   color: #64748b;
   font-size: 14px;
 }
 
-.task-buttons {
+.repair-switches {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-.task-buttons button {
+.repair-switches button {
   min-height: 74px;
   border: 1px solid #475569;
   border-radius: 10px;
@@ -444,12 +448,12 @@
   cursor: pointer;
 }
 
-.task-buttons button:hover {
+.repair-switches button:hover {
   border-color: #60a5fa;
   background: #1e293b;
 }
 
-.task-progress {
+.repair-progress {
   margin-bottom: 0;
   color: #93c5fd !important;
   font-size: 11px;
@@ -458,19 +462,19 @@
   text-align: center;
 }
 
-.fault-monitor {
+.fault-status {
   padding: 20px;
   border: 1px solid #22c55e;
   border-radius: 10px;
   background: rgba(20, 83, 45, 0.22);
 }
 
-.fault-monitor.fault {
+.fault-status.active {
   border-color: #ef4444;
   background: rgba(127, 29, 29, 0.3);
 }
 
-.fault-monitor span {
+.fault-status span {
   display: block;
   margin-bottom: 9px;
   color: #94a3b8;
@@ -479,40 +483,40 @@
   letter-spacing: 1.5px;
 }
 
-.fault-monitor strong {
+.fault-status strong {
   color: #bbf7d0;
 }
 
-.fault-monitor.fault strong {
+.fault-status.active strong {
   color: #fecaca;
 }
 
-.fault-monitor p {
+.fault-status p {
   margin-bottom: 8px;
   color: #cbd5e1;
   line-height: 1.5;
 }
 
-.fault-monitor small {
+.fault-status small {
   color: #fca5a5;
   font-weight: 800;
 }
 
-.engineer-readouts {
+.engineer-data-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 14px;
 }
 
-.engineer-readouts div {
+.engineer-data-grid div {
   padding: 14px;
   border: 1px solid #334155;
   border-radius: 8px;
   background: #020617;
 }
 
-.engineer-readouts span {
+.engineer-data-grid span {
   display: block;
   margin-bottom: 7px;
   color: #94a3b8;
@@ -521,24 +525,24 @@
   letter-spacing: 1.5px;
 }
 
-.engineer-readouts strong {
+.engineer-data-grid strong {
   color: #f8fafc;
 }
 
-.cooperation-note {
+.engineer-help {
   margin-top: 14px;
   padding: 18px;
   border-left: 3px solid #60a5fa;
   background: rgba(2, 6, 23, 0.68);
 }
 
-.cooperation-note strong {
+.engineer-help strong {
   color: #93c5fd;
   font-size: 10px;
   letter-spacing: 1.5px;
 }
 
-.cooperation-note ul {
+.engineer-help ul {
   margin: 12px 0 0;
   padding-left: 18px;
   color: #cbd5e1;
@@ -547,65 +551,60 @@
 }
 
 @media (max-width: 850px) {
-  .arcade-telemetry,
-  .engineer-grid {
+  .moon-game-stats,
+  .engineer-console-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .flight-field {
+  .space-flight-area {
     height: 360px;
   }
 }
 
 @media (max-width: 600px) {
-  .arcade-page {
+  .moon-game-page {
     padding: 12px;
   }
 
-  .arcade-shell {
+  .moon-game-shell {
     padding: 20px 14px;
   }
 
-  .arcade-header {
+  .moon-game-header {
     flex-direction: column;
   }
 
-  .arcade-telemetry,
-  .engineer-grid {
+  .moon-game-stats,
+  .engineer-console-grid {
     grid-template-columns: 1fr;
   }
 
-  .flight-field {
+  .space-flight-area {
     height: 310px;
   }
 
-  .pilot-ship {
+  .player-rocket {
     font-size: 42px;
   }
 
-  .moon-destination {
+  .moon-target {
     width: 90px;
   }
 
-  .pilot-controls-simple {
+  .simple-flight-controls {
     grid-template-columns: 1fr 1fr;
   }
 
-  .pilot-controls-simple > div {
+  .simple-flight-controls > div {
     grid-column: 1 / 3;
     grid-row: 1;
   }
 
-  .task-buttons button {
+  .repair-switches button {
     min-height: 62px;
   }
 
-  .pilot-fault {
-    grid-template-columns: 1fr;
-  }
-
-  .pilot-fault small {
-    grid-column: auto;
-    grid-row: auto;
+  .pilot-malfunction {
+    flex-direction: column;
   }
 }
