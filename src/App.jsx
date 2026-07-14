@@ -167,7 +167,7 @@ function App() {
     } catch (error) {
       console.error("Join room error:", error);
       alert(
-        "Could not join the room. Check your Firebase setup."
+       `${error.code ?? "UNKNOWN ERROR"}\n${error.message}`
       );
     } finally {
       setLoading(false);
