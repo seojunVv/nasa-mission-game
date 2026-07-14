@@ -7,7 +7,10 @@ import {
   update,
 } from "firebase/database";
 
-import { db } from "./firebase";
+import "./App.css";
+import SoloMission from "./SoloMission";
+import MultiplayerMission from "./MultiplayerMission";
+import { db, ensureSignedIn } from "./firebase";
 
 const SYSTEM_LABELS = {
   guidance: "Guidance computer",
