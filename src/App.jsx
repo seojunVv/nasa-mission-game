@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import SoloMission from "./SoloMission";
+
 function App() {
   const [page, setPage] = useState("home");
   const [roomCode, setRoomCode] = useState("");
