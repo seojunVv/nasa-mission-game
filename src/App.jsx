@@ -99,7 +99,7 @@ function App() {
     } catch (error) {
       console.error("Create room error:", error);
       alert(
-        "Could not create the room. Check Firebase Authentication and Database Rules."
+         `${error.code ?? "UNKNOWN ERROR"}\n${error.message}`
       );
     } finally {
       setLoading(false);
