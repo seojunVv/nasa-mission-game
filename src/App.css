@@ -515,3 +515,83 @@ button:hover {
 .control-switch:disabled:hover {
   transform: none;
 }
+.connection-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 26px 0 18px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.connection-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+}
+
+.connection-dot.connected {
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+.player-list {
+  max-width: 500px;
+  display: grid;
+  gap: 8px;
+  margin: 0 auto 30px;
+}
+
+.player-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 16px;
+  border: 1px solid #334155;
+  border-radius: 7px;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.player-row span {
+  color: #94a3b8;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.player-row strong {
+  color: #f8fafc;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.role-card:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.role-card:disabled:hover {
+  transform: none;
+  border-color: #334155;
+  background: rgba(15, 23, 42, 0.82);
+}
+
+.status-message.ready {
+  border-color: #22c55e;
+  background: rgba(20, 83, 45, 0.3);
+  color: #bbf7d0;
+}
+
+.status-dot.ready {
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+.multiplayer-back {
+  display: block;
+  margin: 22px auto 0;
+}
