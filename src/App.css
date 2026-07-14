@@ -457,3 +457,61 @@ button:hover {
     letter-spacing: 7px;
   }
 }
+.mission-alert {
+  margin: 30px 0 10px;
+  padding: 16px 20px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #cbd5e1;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.mission-alert.active {
+  border-color: #facc15;
+  color: #fde68a;
+}
+
+.mission-alert.success {
+  border-color: #22c55e;
+  background: rgba(20, 83, 45, 0.35);
+  color: #bbf7d0;
+}
+
+.mission-alert.failed {
+  border-color: #ef4444;
+  background: rgba(127, 29, 29, 0.35);
+  color: #fecaca;
+}
+
+.control-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-switch span {
+  color: #94a3b8;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.control-switch.active {
+  border-color: #22c55e;
+  background: rgba(20, 83, 45, 0.5);
+  color: #dcfce7;
+}
+
+.control-switch.active span {
+  color: #86efac;
+}
+
+.control-switch:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.control-switch:disabled:hover {
+  transform: none;
+}

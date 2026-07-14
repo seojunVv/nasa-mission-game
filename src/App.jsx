@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-
+import SoloMission from "./SoloMission";
 function App() {
   const [page, setPage] = useState("home");
   const [roomCode, setRoomCode] = useState("");
@@ -119,99 +119,9 @@ function App() {
     );
   }
 
-  if (page === "solo") {
-    return (
-      <main className="home">
-        <section className="solo-panel">
-          <div className="solo-header">
-            <div>
-              <p className="mission-label">APOLLO 13 · SOLO MISSION</p>
-              <h2>MISSION DASHBOARD</h2>
-            </div>
-
-            <button
-              type="button"
-              className="back-button"
-              onClick={returnHome}
-            >
-              ← EXIT MISSION
-            </button>
-          </div>
-
-          <div className="telemetry-grid">
-            <article className="telemetry-card">
-              <span>OXYGEN</span>
-              <strong>82%</strong>
-              <div className="progress-track">
-                <div className="progress-value oxygen-progress" />
-              </div>
-            </article>
-
-            <article className="telemetry-card">
-              <span>POWER</span>
-              <strong>64%</strong>
-              <div className="progress-track">
-                <div className="progress-value power-progress" />
-              </div>
-            </article>
-
-            <article className="telemetry-card">
-              <span>CO₂ LEVEL</span>
-              <strong>NORMAL</strong>
-              <p>4.2 mmHg</p>
-            </article>
-          </div>
-
-          <div className="solo-workspace">
-            <section className="workspace-card">
-              <p className="section-number">01</p>
-              <h3>ASTRONAUT PANEL</h3>
-              <p>
-                Operate the spacecraft controls and complete instructions
-                from Mission Control.
-              </p>
-
-              <div className="switch-list">
-                <button type="button" className="control-switch">
-                  MAIN POWER
-                </button>
-
-                <button type="button" className="control-switch">
-                  OXYGEN VALVE
-                </button>
-
-                <button type="button" className="control-switch">
-                  AUX BATTERY
-                </button>
-              </div>
-            </section>
-
-            <section className="workspace-card">
-              <p className="section-number">02</p>
-              <h3>MISSION CONTROL</h3>
-              <p>
-                Read the procedure and perform each instruction in the
-                correct order.
-              </p>
-
-              <div className="procedure-box">
-                <span>CURRENT PROCEDURE</span>
-                <strong>Initial systems check</strong>
-                <p>
-                  Confirm that the main power system is active before
-                  opening the oxygen valve.
-                </p>
-              </div>
-            </section>
-          </div>
-
-          <button type="button" className="start-mission-button">
-            BEGIN APOLLO 13 MISSION
-          </button>
-        </section>
-      </main>
-    );
-  }
+ if (page === "solo") {
+  return <SoloMission onExit={returnHome} />;
+}
 
   return (
     <main className="home">
