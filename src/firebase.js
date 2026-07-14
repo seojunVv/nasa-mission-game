@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "네 Firebase apiKey",
+  apiKey: "AIzaSyCrqtaaEltWuVgZCom2PfWSQBkVbe9e69Q",
   authDomain: "nasa-mission-game.firebaseapp.com",
   databaseURL:
     "https://nasa-mission-game-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "nasa-mission-game",
   storageBucket: "nasa-mission-game.firebasestorage.app",
   messagingSenderId: "62363577124",
-  appId: "네 Firebase appId",
+  appId: "1:62363577124:web:1960a88f86996a6b81e1b1",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -33,7 +33,6 @@ function getPlayerId() {
   return playerId;
 }
 
-// App.jsx를 수정하지 않아도 되도록 이름은 그대로 유지
 export async function ensureSignedIn() {
   return {
     uid: getPlayerId(),
