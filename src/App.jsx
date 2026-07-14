@@ -9,6 +9,7 @@ import {
 
 import "./App.css";
 import SoloMission from "./SoloMission";
+import MultiplayerMission from "./MultiplayerMission";
 import { db, ensureSignedIn } from "./firebase";
 
 function generateRoomCode() {
@@ -331,81 +332,15 @@ function App() {
     );
   }
 
-  if (page === "astronaut" || page === "engineer") {
-    const isAstronaut = page === "astronaut";
-
-    const requiredOtherRole = isAstronaut
-      ? "engineer"
-      : "astronaut";
-
-    const otherPlayerReady = players.some(
-      ([playerUid, player]) =>
-        playerUid !== userId &&
-        player.role === requiredOtherRole
-    );
-
-    return (
-      <main className="home">
-        <section className="panel">
-          <p className="mission-label">
-            APOLLO 13 · MULTIPLAYER
-          </p>
-
-          <h2>
-            {isAstronaut
-              ? "ASTRONAUT CONTROL PANEL"
-              : "MISSION CONTROL"}
-          </h2>
-
-          <p className="room-information">
-            ROOM <strong>{roomCode}</strong>
-          </p>
-
-          <div
-            className={
-              otherPlayerReady
-                ? "status-message ready"
-                : "status-message"
-            }
-          >
-            <span
-              className={
-                otherPlayerReady
-                  ? "status-dot ready"
-                  : "status-dot"
-              }
-            />
-
-            {otherPlayerReady
-              ? "Both players are connected and ready."
-              : "Waiting for the other player to choose a role..."}
-          </div>
-
-          {otherPlayerReady && (
-            <button
-              type="button"
-              className="primary-button"
-              onClick={() =>
-                alert(
-                  "Both players are connected. The synchronized mission comes next."
-                )
-              }
-            >
-              START MULTIPLAYER MISSION
-            </button>
-          )}
-
-          <button
-            type="button"
-            className="back-button multiplayer-back"
-            onClick={() => setPage("role")}
-          >
-            ← CHANGE ROLE
-          </button>
-        </section>
-      </main>
-    );
-  }
+if (page === "astronaut" || page === "engineer") {
+  return (
+    <MultiplayerMission
+      roomCode={roomCode}
+      role={page}
+      onBack={() => setPage("role")}
+    />
+  );
+}
 
   if (page === "solo") {
     return <SoloMission onExit={returnHome} />;

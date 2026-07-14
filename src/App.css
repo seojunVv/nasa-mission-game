@@ -595,3 +595,71 @@ button:hover {
   display: block;
   margin: 22px auto 0;
 }
+.multiplayer-panel {
+  width: 100%;
+  max-width: 1100px;
+  padding: 50px;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  background: rgba(2, 6, 23, 0.94);
+  color: #f8fafc;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.multiplayer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.multiplayer-workspace {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.astronaut-workspace {
+  margin-top: 22px;
+}
+
+.switch-monitor {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.switch-monitor div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #334155;
+  border-radius: 7px;
+  background: #0f172a;
+}
+
+.switch-monitor span {
+  color: #94a3b8;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.switch-monitor strong {
+  color: #f8fafc;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 760px) {
+  .multiplayer-panel {
+    padding: 30px 20px;
+  }
+
+  .multiplayer-header {
+    flex-direction: column;
+  }
+
+  .multiplayer-workspace {
+    grid-template-columns: 1fr;
+  }
+}
